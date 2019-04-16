@@ -1901,6 +1901,8 @@ int64_t GetBlockValue(int nHeight)
 
     }
 
+    // TODO 
+    // What block rewards?
     int64_t nSubsidy = 0;
     if (nHeight == 0) {
         nSubsidy = 60001 * COIN;
@@ -2180,6 +2182,8 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
             return 0;
     }
 
+    // TODO
+    // What reward to give masternode?
     if (nHeight <= 43200) {
         ret = blockValue / 5;
     } else if (nHeight < 86400 && nHeight > 43200) {
