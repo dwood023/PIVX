@@ -176,7 +176,7 @@ public:
          *   vMerkleTree: e0028e
          */
         // TODO -- Funny phrase here
-        const char* pszTimestamp = "U.S. News & World Report Jan 28 2016 With His Absence, Trump Dominates Another Debate";
+        const char* pszTimestamp = "16/04/19 Notre-Dame fire: Millions pledged to rebuild cathedral";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
