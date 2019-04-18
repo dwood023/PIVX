@@ -12,6 +12,7 @@
 #include "utilstrencodings.h"
 
 #include <assert.h>
+#include <iostream>
 
 #include <boost/assign/list_of.hpp>
 
@@ -79,7 +80,7 @@ static const Checkpoints::CCheckpointData dataRegtest = {
     1454124731,
     0,
     100};
-
+    
 libzerocoin::ZerocoinParams* CChainParams::Zerocoin_Params(bool useModulusV1) const
 {
     assert(this);
@@ -166,19 +167,19 @@ public:
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 250 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04c10e83b2703ccf322f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1555428308;
+        genesis.nTime = 1555576155;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 4343565;
+        genesis.nNonce = 720434;
 
         hashGenesisBlock = genesis.GetHash();
         LogPrintf("Genesis block hash: %s", hashGenesisBlock.ToString());
-/*         assert(hashGenesisBlock == uint256("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
-        assert(genesis.hashMerkleRoot == uint256("0x1b2ef6e2f28be914103a277377ae7729dcd125dfeb8bf97bd5964ba72b6dc39b")); */
+        assert(hashGenesisBlock == uint256("0x00000c6507686a102a1ebab9ab0d5df9562ffb688f231cbd61233eb294e45578"));
+        assert(genesis.hashMerkleRoot == uint256("0x54752360ae08d185c1bc75a1f5aca40557f7f68736f31f68a801b96175adfd1a"));
 
         vSeeds.push_back(CDNSSeedData("Fake DNS Seeder", "doesnt.exist.com"));     // Primary DNS Seeder from Fuzzbawls
 
@@ -372,6 +373,7 @@ public:
         assert(hashGenesisBlock == uint256("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
         //assert(hashGenesisBlock == uint256("0x4f023a2120d9127b21bbad01724fdb79b519f593f2a85b60d3d79160ec5f29df"));
 
+        
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
 
