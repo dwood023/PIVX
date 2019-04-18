@@ -174,12 +174,12 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1555576155;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 720434;
+        genesis.nNonce = 1168461;
 
         hashGenesisBlock = genesis.GetHash();
         LogPrintf("Genesis block hash: %s", hashGenesisBlock.ToString());
-        assert(hashGenesisBlock == uint256("0x00000c6507686a102a1ebab9ab0d5df9562ffb688f231cbd61233eb294e45578"));
-        assert(genesis.hashMerkleRoot == uint256("0x54752360ae08d185c1bc75a1f5aca40557f7f68736f31f68a801b96175adfd1a"));
+        assert(hashGenesisBlock == uint256("00000ec73f06830da5292bc8d29570a5f5970a3f91849aa5c96eb7d02cd2daad"));
+        assert(genesis.hashMerkleRoot == uint256("d85b045c221e80037d463882edff78468d89e96e17d82d8bb313af44225b1300"));
 
         //vSeeds.push_back(CDNSSeedData("Fake DNS Seeder", "doesnt.exist.com"));     // Primary DNS Seeder from Fuzzbawls
 
