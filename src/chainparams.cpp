@@ -181,7 +181,7 @@ public:
         assert(hashGenesisBlock == uint256("0x00000c6507686a102a1ebab9ab0d5df9562ffb688f231cbd61233eb294e45578"));
         assert(genesis.hashMerkleRoot == uint256("0x54752360ae08d185c1bc75a1f5aca40557f7f68736f31f68a801b96175adfd1a"));
 
-        vSeeds.push_back(CDNSSeedData("Fake DNS Seeder", "doesnt.exist.com"));     // Primary DNS Seeder from Fuzzbawls
+        //vSeeds.push_back(CDNSSeedData("Fake DNS Seeder", "doesnt.exist.com"));     // Primary DNS Seeder from Fuzzbawls
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 30);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
