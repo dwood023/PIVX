@@ -54,7 +54,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("1"));
+    (0, uint256("0x00000c6507686a102a1ebab9ab0d5df9562ffb688f231cbd61233eb294e45578"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1551924791, // * UNIX timestamp of last checkpoint block
@@ -80,7 +80,7 @@ static const Checkpoints::CCheckpointData dataRegtest = {
     1454124731,
     0,
     100};
-    
+
 libzerocoin::ZerocoinParams* CChainParams::Zerocoin_Params(bool useModulusV1) const
 {
     assert(this);
